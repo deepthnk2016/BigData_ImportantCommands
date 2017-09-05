@@ -1,0 +1,58 @@
+to start ssh --> sudo /etc/init.d/ssh start
+
+-------------------------------
+
+Command to run mapreduce program -
+
+	hadoop jar Session3Assignment2.jar /television.txt /Session3Assignment2Output
+
+To view the output -
+
+	hdfs dfs -cat /Session3Assignment2Output/part-r-00000
+
+------------------------------
+
+hadoop fs -rm -r /Session3Assignment3/output/CompanyWiseSale
+hadoop jar CompanyWiseSale.jar /Session3Assignment3/input/television.txt /Session3Assignment3/output/CompanyWiseSale
+hadoop fs -cat /Session3Assignment3/output/CompanyWiseSale/part-r-00000
+
+hadoop fs -rm -r /Session3Assignment3/output/CompanyStateWiseSale
+hadoop jar CompanyStateWiseSale.jar /Session3Assignment3/input/television.txt /Session3Assignment3/output/CompanyStateWiseSale
+hadoop fs -cat /Session3Assignment3/output/CompanyStateWiseSale/part-r-00000
+
+-----------------------------
+
+inputfile = LOAD 'hdfs://deepakray-VirtualBox:9000/pig/Session4Assignment2/input_dataset' as (firstname:chararray, lastname:chararray, dept:chararray, salary:int) ;
+
+
+------------------------------
+
+To download pig:
+www-eu.apache.org/dist/pig/pig-0.17.0/
+
+To install pig-
+tar -xvf pig-xxx-xxx.tz
+
+A = LOAD 'hdfs://deepakray-virtualbox:9000/pig/Session4Assignment2/input_dataset';
+
+Error - retrying connect to server
+Solution - Start historyserver
+		cd $HADOOP_HOME/sbin
+		./mr-jobhistory-daemon.sh start historyserver
+
+
+-----------------------------
+
+http://www-us.apache.org/dist/hive/hive-2.3.0/apache-hive-2.3.0-bin.tar.gz
+
+tar -xvf hivexxxx.gz
+
+-------------------------------------------
+
+https://db.apache.org/derby/releases/release-10.13.1.1.cgi/
+http://www-eu.apache.org/dist//db/derby/db-derby-10.13.1.1/db-derby-10.13.1.1-bin.tar.gz
+
+---------------------------------------
+installing hbase
+
+wget http://www-us.apache.org/dist/hbase/1.3.1/hbase-1.3.1-src.tar.gz 
